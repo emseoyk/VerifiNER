@@ -1,0 +1,131 @@
+whole_prediction: 1655 = 1655
+
+before_ver_TP: 1227
+before_ver_FP: 428
+     ㄴbefore_ver_FP_spur: 183
+     ㄴbefore_ver_FP_label: 51
+     ㄴbefore_ver_FP_span: 154
+     ㄴbefore_ver_FP_both: 40
+
+whole_verification: 1655 = 1655
+
+ ㄴafter_ver_TP: 1213
+ ㄴafter_ver_TN: 54
+ ㄴafter_ver_FN: 66
+ ㄴafter_ver_FP: 321
+
+     ㄴafter_ver_FP_spur: 129
+     ㄴafter_ver_FP_label: 7
+     ㄴafter_ver_FP_span: 106
+     ㄴafter_ver_FP_both: 79
+parsing_error: 1
+     ㄴTP2parse_error: 1
+     ㄴFP2parse_error: 0
+
+< prediction True (TP->) >
+before verification TP: 1227 = 1227
+
+TP->TP: 1070 , 64.6525679758308
+TP->FN: 47 , 2.8398791540785497
+TP->FP_spur: 0 , 0.0
+TP->FP_label: 2 , 0.12084592145015105
+TP->FP_span: 58 , 3.5045317220543803
+TP->FP_both: 49 , 2.9607250755287007
+
+TP->FP: 109 , 6.586102719033232
+
+
+TP -> parsing error: 1 , 0.060422960725075525
+
+TP -> False: 156 , 9.425981873111782
+
+
+before verification FP: 428 = 428
+FP_spur -> TN: 54 , 3.262839879154079
+FP_label -> TN: 0 , 0.0
+FP_span -> TN: 0 , 0.0
+FP_both -> TN: 0 , 0.0
+
+
+FP_spur -> TP: 0 , 0.0
+FP_label -> TP: 36 , 2.175226586102719
+FP_span -> TP: 87 , 5.256797583081571
+FP_both -> TP: 20 , 1.2084592145015105
+
+
+FP->True: 197 , 11.90332326283988
+
+
+FP_spur -> FN: 0 , 0.0
+FP_label -> FN: 0 , 0.0
+FP_span -> FN: 15 , 0.906344410876133
+FP_both -> FN: 4 , 0.2416918429003021
+FP -> FN: 19 , 1.148036253776435
+
+
+FP_spur -> FP_spur: 129 , 7.794561933534744
+FP_label -> FP_spur: 0 , 0.0
+FP_span -> FP_spur: 0 , 0.0
+FP_both -> FP_spur: 0 , 0.0
+FP -> SPUR: 129 , 7.794561933534744
+
+
+FP_spur -> FP_label: 0 , 0.0
+FP_label -> FP_label: 5 , 0.3021148036253776
+FP_span -> FP_label: 0 , 0.0
+FP_both -> FP_label: 0 , 0.0
+FP -> LABEL: 5 , 0.3021148036253776
+
+
+FP_spur -> FP_span: 0 , 0.0
+FP_label -> FP_span: 4 , 0.2416918429003021
+FP_span -> FP_span: 43 , 2.598187311178248
+FP_both -> FP_span: 1 , 0.060422960725075525
+FP -> SPAN: 48 , 2.900302114803625
+
+
+FP_spur -> FP_both: 0 , 0.0
+FP_label -> FP_both: 6 , 0.36253776435045315
+FP_span -> FP_both: 9 , 0.5438066465256798
+FP_both -> FP_both: 15 , 0.906344410876133
+FP -> BOTH: 30 , 1.812688821752266
+
+
+FP -> parsing error: 0 , 0.0
+
+FP -> False: 231 , 13.957703927492446
+
+
+parsing_error: 1 , 0.060422960725075525
+
+
+Whole pred entity : 1655
+
+
+before_ver_TP ratio: 1227 , 74.13897280966766
+before_ver_FP ratio: 428 , 25.861027190332326
+before_ver_FN: 42
+
+before_ver_precision : 0.7413897280966767
+before_ver_recall : 0.966903073286052
+before_ver_f1: 0.8392612859097127
+
+
+after_ver_T ratio: 1267 , 0.7655589123867069
+after_ver_F ratio: 388 , 0.23444108761329305
+after_ver_precision: 0.7907431551499348
+after_ver_recall: 0.9182437547312642
+after_ver_f1: 0.8497373029772329
+
+
+
+true_not_in_cand_list: 53
+true_in_cand_list: 132
+error not verifiable(not in KB %): 0.2864864864864865
+
+not_in_KB_or_train: 66
+in KB or train: 1406
+SPUR error: 183
+whole verification input: 1655
+gold exist input: 1472
+coverage: 0.9551630434782609
