@@ -1,0 +1,92 @@
+[Task Description]
+You are solving named entity recognition task for biomedical articles. In the paragraph, there is an entity to which you need to assign either one of the six classes : protein, DNA, RNA, cell_line, cell_type or None. Class 'None' is assigned when an entity does not belong to any of the five classes: protein, DNA, RNA, cell_line, and cell_type. I will give you an entity and reliable knowledge about the entity for reference. There are two types of knowledge: definition and semantic type of entities you need to predict. Identify the class of the entity and explain why. When generating explanation, you need to quote the knowledge. If both definition and semantic type are not provided, use context information of entity in Paragraph or your own knowledge to explain.
+Remember, you should assign at least one class for each entity from above six(protein, DNA, RNA, cell_line, cell_type or None). Using Example 1 to 6 as reference, answer Example 7
+
+[Example 1]
+Paragraph:
+Whereas GRalpha is a hormone-activated transcription factor , GRbeta does not bind glucocorticoids ( GCs ) , is transcriptionally inactive , and is a potential inhibitor of activated GRalpha .
+
+Entity:GRalpha
+
+Knowledge about this entity:
+The definition of GRalpha is not provided.
+The semantic type of GRalpha is ['Amino Acid, Peptide, or Protein', 'Receptor'].
+
+Explanation: Based on the given knowledge, the semantic type of GRalpha is 'Amino Acid, Peptide, or Protein' and 'Receptor'. Proteins are large molecules that perform various functions in the body, including acting as receptors for hormones and other signaling molecules. In this case, GRalpha is described as a hormone-activated transcription factor, which aligns with its role as a protein receptor. Therefore, the class of the entity GRalpha is protein.
+
+[Example 2]
+Paragraph:
+A DNA probe that spanned a domain conserved among the proto-oncogene c-rel , the Drosophila morphogen dorsal , and the p50 DNA binding subunit of NF-kappa B was generated from Jurkat T cell complementary DNA with the polymerase chain reaction ( PCR ) and degenerate oligonucleotides .
+
+Entity: DNA binding
+
+Knowledge about this entity:
+Although definition and semantic type of DNA binding is not provided, DNA binding is a valid biomedical entity.
+
+Explanation:
+Since the definition and semantic type of DNA binding are not provided, we can use our own knowledge to determine the class of the entity. DNA binding refers to the process by which proteins interact with DNA molecules. Proteins that bind to DNA play important roles in various cellular processes, such as gene regulation and DNA replication. Therefore, based on our knowledge, the class of the entity 'DNA binding' is protein.
+
+
+[Example 3]
+Paragraph:
+Inhibition of the gut inflammatory response by the antisense oligonucleotide or the depletion of neutrophils from SCID-HU- INT mice blocked the increase in intestinal permeability observed with amebic infection .
+
+Entity: neutrophils
+
+Knowledge about this entity:
+The definition of neutrophils is ['Granular leukocytes having a nucleus with three to five lobes connected by slender threads of chromatin, and cytoplasm containing fine inconspicuous granules and stainable by neutral dyes.'].
+The semantic type of neutrophils is ['Cell'].
+
+Explanation:
+Based on the given knowledge, the definition of neutrophils is 'Granular leukocytes having a nucleus with three to five lobes connected by slender threads of chromatin, and cytoplasm containing fine inconspicuous granules and stainable by neutral dyes.' This definition indicates that neutrophils are a type of cell, specifically a type of granular leukocyte. Therefore, the class of the entity neutrophils is cell_type.
+
+[Example 4]
+Paragraph:
+Importantly , additional testing of a corresponding set of peptides covering the complete sequence of pp65 on 10 of these donors identified individuals whose CD8 ( + ) T cells recognized IE-1 but not pp65 and vice versa , clearly illustrating that either protein may be a major target .
+
+Entity: pp65
+
+Knowledge about this entity:
+Although definition and semantic type of pp65 is not provided, pp65 is a valid biomedical entity.
+
+Explanation:
+Since the definition and semantic type of pp65 are not provided, we can use our own knowledge to determine the class of the entity. In the given paragraph, pp65 is mentioned as a protein that can be recognized by CD8(+) T cells. Proteins are large molecules that perform various functions in the body, including acting as targets for immune responses. In this case, pp65 is described as a protein that can be recognized by CD8(+) T cells, indicating its role as a potential target for immune responses. Therefore, the class of the entity pp65 is protein.
+
+[Example 5]
+Paragraph:
+Fibronectin synergized with anti-CD3 antibody to promote CD4 cell proliferation in a serum-free culture system whereas no proliferation was observed when CD4 cells were cultured with anti-CD3 alone or fibronectin alone .
+
+Entity: Fibronectin
+
+Knowledge about this entity:
+The definition of Fibronectin is ['Glycoproteins found on the surfaces of cells, particularly in fibrillar structures. The proteins are lost or reduced when these cells undergo viral or chemical transformation. They are highly susceptible to proteolysis and are substrates for activated blood coagulation factor VIII. The forms present in plasma are called cold-insoluble globulins.'].
+The semantic type of Fibronectin is ['Amino Acid, Peptide, or Protein', 'Biologically Active Substance'].
+
+
+Explanation:
+Based on the given knowledge, the definition of Fibronectin is 'Glycoproteins found on the surfaces of cells, particularly in fibrillar structures.' This aligns with the semantic type of Fibronectin as 'Amino Acid, Peptide, or Protein' and 'Biologically Active Substance'. Proteins are large molecules that perform various functions in the body, including being found on the surfaces of cells. Fibronectin is specifically described as a glycoprotein found on the surfaces of cells, indicating its role as a protein. Therefore, the class of the entity Fibronectin is protein.
+
+[Example 6]
+Paragraph:
+This shows that the induction of gene expression by FICZ and UV is Ah receptor dependent .
+
+Entity: FICZ
+
+Knowledge about this entity:
+The definition of FICZ is not provided.
+The semantic type of FICZ is ['Organic Chemical', 'Pharmacologic Substance'].
+
+Explanation:
+'Based on the given knowledge, the semantic type of FICZ is 'Organic Chemical' and 'Pharmacologic Substance'. Organic chemicals are compounds that contain carbon atoms and are commonly found in biological systems. FICZ is specifically described as an organic chemical, indicating its nature as a compound. Additionally, FICZ is also classified as a pharmacologic substance, suggesting its potential role in interacting with biological systems, such as receptors or enzymes.\n\nSince the definition of FICZ is not provided, we can use the semantic type information and our own knowledge to determine the class of the entity. Based on the given context, FICZ is mentioned in relation to the induction of gene expression and its dependence on the Ah receptor. The Ah receptor, also known as the aryl hydrocarbon receptor, is a protein receptor that binds to various ligands, including organic chemicals like FICZ. Therefore, considering the context and the semantic type of FICZ as an organic chemical, it is likely that FICZ is a ligand or a small molecule that interacts with the Ah receptor.\n\n Entity FICZ is likely to be organic chemical or small molecule and doesn't belong to any of the five classes: protein, DNA, RNA, cell_line and cell type. Therefore the class of entity FICZ is None'
+
+
+[Example 7]
+Paragraph:
+{context}
+
+Entity: {entity}
+
+Knowledge about this entity:
+{knowledge}
+
+Explanation:
