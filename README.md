@@ -11,11 +11,11 @@ This is the overview of VerifiNER framework.
 Please refer to the paper for details.
 
 ## Usage
-### Factuality Verification
-
-### Contextual Relevance Verification
-
-
+```
+export OPENAI_API_KEY="your-api-key" \
+sh scripts/verification.sh
+```
+This shell script allows you to run preprocessing, verification, and evaluation all at once. 
 
 ## Citation
 If you find our work useful, please cite our paper:
