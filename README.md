@@ -6,7 +6,7 @@ Official code for ACL 2024 paper: [VerifiNER: Verification-augmented NER via Kno
 
 This is the overview of VerifiNER framework.
 1. Using entity prediction by existing models, we (a) extract candidate spans to retrieve knowledge from KB and verify factuality of span accordingly. Then (b) using retrieved knowledge, we verify factuality of type by generating knowledge-grounded evidence.
-2. Lastly, we take consistency voting to select a candidate that is the most contextually relevant, with the help of the reasoning ability of LLMs.
+2. We take consistency voting to select a candidate that is the most contextually relevant, with the help of the reasoning ability of LLMs.
 
 Please refer to the paper for details.
 
